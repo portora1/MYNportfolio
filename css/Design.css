@@ -1,0 +1,264 @@
+/* --- DXRacer風ヘッダー --- */
+
+.site-header {
+  background-color: #0b0b0b;
+  border-bottom: 4px solid #e60012;
+  padding: 20px 0;
+  box-shadow: 0 4px 10px rgba(255, 0, 0, 0.4);
+}
+
+.header-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo a {
+  font-size: 2.4rem;
+  color: #e60012;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu li a {
+  display: block;
+  padding: 10px 18px;
+  background: #1a1a1a;
+  color: #fff;
+  border: 2px solid #e60012;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.nav-menu li a:hover {
+  background-color: #e60012;
+  color: #000;
+}
+
+/* ハンバーガーアイコン */
+#menubar_hdr {
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 1000;
+}
+
+.menu-icon span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #e60012;
+  margin: 5px 0;
+}
+
+/* メニュー初期状態：非表示（スマホのみ） */
+@media screen and (max-width: 768px) {
+  #menubar {
+    display: none;
+    background: #111;
+    padding: 20px;
+  }
+
+  #menubar ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  #menubar li a {
+    display: block;
+    padding: 10px;
+    background: #1a1a1a;
+    border: 1px solid #e60012;
+    margin-bottom: 5px;
+    color: #fff;
+    text-align: center;
+  }
+}/* --- メンバー紹介をカード風に --- */
+.list-normal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.list {
+  background: linear-gradient(145deg, #1a1a1a, #121212);
+  border: 2px solid #00ffff;
+  border-radius: 12px;
+  width: 280px;
+  overflow: hidden;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.list:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 18px rgba(0, 255, 255, 0.6);
+}
+
+.list figure {
+  margin: 0;
+  height: 180px;
+  overflow: hidden;
+  border-bottom: 2px solid #00ffff;
+}
+
+.list img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.list .text {
+  padding: 15px;
+  color: #fff;
+  font-family: 'Arial', 'メイリオ', sans-serif;
+}
+
+.list .text h4,
+.list .text h5 {
+  margin: 0 0 10px;
+  font-size: 1.1rem;
+  color: #ff00ff; /* ネオンピンク */
+  text-shadow: 0 0 5px rgba(255, 0, 255, 0.5);
+}
+
+.list .text p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #ccc;
+}
+.list-normal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 60px; /* ← 追加ここだけでOK！ */
+}
+body {
+  background: linear-gradient(135deg, #111, #1a1a1a);
+  color: #fff;
+  font-family: 'メイリオ', sans-serif;
+}
+/* クーガー - 明るいイエロー */
+.cougar {
+  border: 3px solid #FFF275;
+}
+
+/* マナシィ - グレイッシュブルー */
+.manacy {
+  border: 3px solid #7A9CAD;
+}
+
+/* ケイリス - ガンメタ */
+.keilis {
+  border: 3px solid #4B4B4B;
+}
+
+/* ポルトラ - バーガンディ */
+.portora {
+  border: 3px solid #800020;
+}
+/* --- カード見出し（名前）の色 --- */
+.cougar h4 {
+  color: #FFF275; /* 明るい黄色 */
+}
+.manacy h4 {
+  color: #7A9CAD; /* グレイッシュブルー */
+}
+.keilis h4 {
+  color: #4B4B4B; /* ガンメタ */
+}
+.portora h5 {
+  color: #800020; /* バーガンディ */
+}
+
+/* --- 画像とテキストの間に色つき横線 --- */
+.cougar .text::before,
+.manacy .text::before,
+.keilis .text::before,
+.portora .text::before {
+  content: "";
+  display: block;
+  height: 4px;
+  margin: 10px 0;
+  border-radius: 2px;
+}
+
+.cougar .text::before {
+  background-color: #FFF275;
+}
+.manacy .text::before {
+  background-color: #7A9CAD;
+}
+.keilis .text::before {
+  background-color: #4B4B4B;
+}
+.portora .text::before {
+  background-color: #800020;
+}
+/* --- 各メンバーの横線スタイル --- */
+.cougar .text::before,
+.manacy .text::before,
+.keilis .text::before,
+.portora .text::before {
+  content: "";
+  display: block;
+  height: 4px;
+  margin: 12px 0;
+  border-radius: 2px;
+}
+
+/* 色割り当て */
+.cougar .text::before {
+  background-color: #FFF275; /* クーガー：黄色 */
+}
+.manacy .text::before {
+  background-color: #7A9CAD; /* マナシィ：グレイッシュブルー */
+}
+.keilis .text::before {
+  background-color: #4B4B4B; /* ケイリス：ガンメタ */
+}
+.portora .text::before {
+  background-color: #800020; /* ポルトラ：バーガンディ */
+}
+/* 共通設定：一旦 border をなくす */
+.list figure {
+  margin: 0;
+  height: 180px;
+  overflow: hidden;
+  border-bottom: none;
+}
+
+/* 個別の border-bottom を付与 */
+.cougar figure {
+  border-bottom: 3px solid #FFF275; /* クーガー：明るい黄色 */
+}
+
+.manacy figure {
+  border-bottom: 3px solid #7A9CAD; /* マナシィ：グレイッシュブルー */
+}
+
+.keilis figure {
+  border-bottom: 3px solid #4B4B4B; /* ケイリス：ガンメタ */
+}
+
+.portora figure {
+  border-bottom: 3px solid #800020; /* ポルトラ：バーガンディ */
+}
